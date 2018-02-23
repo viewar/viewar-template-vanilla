@@ -5,5 +5,5 @@ npm run start
 
 ## deploy
 
-viewar-cli deploy you.bundle.id 1
+viewar-cli deploy your.bundle.id 1
 
