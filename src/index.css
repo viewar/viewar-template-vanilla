@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 9pt;
+}
+
+#app {
+   position: absolute;
+   z-index: 2;
+ }
+
+.emscripten {
+    z-index: 1 !important;
+}
+
+#customCanvas {
+  width: 50vw;
+  height: 50vh;
+}
+
+#infoBox {
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.44);
+  padding: 8px;
+  width: 132px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+}
+
+.selected {
+  outline: solid red 1px;
+}
+
+.label {
+  font-weight: 600;
+  margin: 9px 2px 3px 0;
+}
+
+.sublabel {
+  font-style: italic;
+  margin: 9px 2px 3px 0;
+}
+
+#deleteButton {
+  margin: 10px 0 0 0;
+}
