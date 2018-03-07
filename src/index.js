@@ -79,7 +79,6 @@ function renderInfoBox(selection) {
 
   infoBox.innerHTML = `
     <div class="label">Name</div><div>${selection.model.name}</div>
-    <div class="label">ID</div><div>${selection.id}</div>
     <div class="label">Materials</div>
     <div>${renderMaterials()}</div>
     <button data-instance-id="${selection.id}" id="deleteButton">Remove</button>

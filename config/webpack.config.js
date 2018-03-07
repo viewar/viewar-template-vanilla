@@ -20,15 +20,13 @@ const commonConfig = merge([
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'ViewAR React Boilerplate',
+        title: 'ViewAR Template Vanilla',
         template: `${PATHS.app}/index.html`,
       }),
-      new webpack.IgnorePlugin(/^(core)$/),
     ],
     resolve: {
       modules: [
         "node_modules",
-        "viewar-modules",
       ],
     },
     module: {
@@ -36,7 +34,7 @@ const commonConfig = merge([
         {
           test: /\.js$/,
           include: PATHS.app,
-          exclude: [/node_modules/, /viewar-modules/],
+          exclude: [/node_modules/],
 
           use: {
             loader: 'babel-loader',
