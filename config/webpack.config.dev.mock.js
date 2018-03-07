@@ -1,7 +1,7 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 
-const developmentConfig = require('./webpack.development');
+const developmentConfig = require('./webpack.config.dev');
 const utils = require('./utils');
 
 

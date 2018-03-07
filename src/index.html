@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <title>ViewAR Vanilla Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta charset="UTF-8">
+    <title>ViewAR Vanilla Template</title>
 </head>
 <body>
-    <script src="../node_modules/viewar-core/viewar-core.js"></script>
+    <script type="text/javascript">
+      window.bundleIdentifier = window.bundleIdentifier || <%= JSON.stringify(htmlWebpackPlugin.options.bundleIdentifier) %>
+      window.bundleVersion = window.bundleVersion || <%= JSON.stringify(htmlWebpackPlugin.options.bundleVersion) %>
+    </script>
+    <script src="./viewar-core.js"></script>
 </body>
+<link rel="stylesheet" type="text/css" href="//CustomUI/index.css">
 </html>
+
