@@ -2,14 +2,14 @@
 
 This sample project demonstrates a basic usage of the [ViewAR Api](https://www.npmjs.com/package/viewar-api) using pure JavaScript without any framework.
 
-####Features:
+#### Features:
 
  *  Insert models into 3D scene 
  *  Move, rotate models in the scene
  *  Remove models
  *  Change materials of models
 
-##install
+## install
 
 This sample project is meant to be used by [viewar-cli](https://github.com/viewar/viewar-cli). If you do not have this tool installed you can use npm to install it globally:
 
@@ -38,7 +38,7 @@ viewar-cli init
 5. In the last step you may choose any of the trackers, since they are not used in this sample.
 
 
-##development 
+## development 
 
 
 Visit https://webversion.viewar.com/YOUR-BUNDLE/YOUR-VERSION/ to run your app in the browser. (For example: https://webversion.viewar.com/com.myCompany.ARapp/1.0/)
@@ -56,7 +56,7 @@ npm run start:mock
 ```
   
 
-##deployment
+## deployment
 
 to deploy your changes enter
 
@@ -66,7 +66,7 @@ viewar-cli deploy YOUR-BUNDLE YOUR-VERSION`
 
 you can run your app on an iOS device by entering the bundle id into the [ViewAR SDK app](https://itunes.apple.com/at/app/viewar-sdk/id1097511807?mt=8) available in the [AppStore](https://www.apple.com/de/ios/app-store/).
 
-##licence
+## licence
 
 Copyright (c) 2018, ViewAR GmbH
 
