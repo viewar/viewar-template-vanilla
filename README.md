@@ -61,7 +61,7 @@ npm run start:mock
 to deploy your changes enter
 
 ```bash 
-viewar-cli deploy YOUR-BUNDLE YOUR-VERSION`
+viewar-cli deploy YOUR-BUNDLE YOUR-VERSION
 ```
 
 you can run your app on an iOS device by entering the bundle id into the [ViewAR SDK app](https://itunes.apple.com/at/app/viewar-sdk/id1097511807?mt=8) available in the [AppStore](https://www.apple.com/de/ios/app-store/).
