@@ -3,5 +3,3 @@ bundle/
 build/
 .idea/
 .viewar-config
-viewar-modules/viewar-scripts/
-viewar-modules/viewar-core/
