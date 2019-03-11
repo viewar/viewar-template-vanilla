@@ -1,4 +1,7 @@
-html, body {
+@import '~normalize.css';
+
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -9,12 +12,12 @@ html, body {
 }
 
 #app {
-   position: absolute;
-   z-index: 2;
- }
+  position: absolute;
+  z-index: 2;
+}
 
 .emscripten {
-    z-index: 1 !important;
+  z-index: 1 !important;
 }
 
 #customCanvas {

@@ -1,7 +1,7 @@
 import viewarApi from 'viewar-api';
 
-import './index.css';
-import './spinner.css';
+import './index.scss';
+import './spinner.scss';
 
 const appId = 'com.viewar.sample.vanilla';
 const version = 1;
@@ -9,12 +9,12 @@ const version = 1;
 let selection;
 let spinner;
 
-
-;(async function () {
-
-
+(async function() {
   //TODO consistent App-Container !!! Or maybe it is always app and not vierwar_app ?
-  const appContainer = document.getElementById('app') || document.getElementById('viewar_app') || window.document.body;
+  const appContainer =
+    document.getElementById('app') ||
+    document.getElementById('viewar_app') ||
+    window.document.body;
   appContainer.innerHTML = `
     <div id="loadingSpinner" class="spinnerWrapper hidden">
       <div class="loadingSpinner"></div>
@@ -33,7 +33,7 @@ let spinner;
 
   showLoading(true);
 
-  const api = await viewarApi.init({appId, version, logToScreen: true});
+  const api = await viewarApi.init({ appId, version, logToScreen: true });
   window.api = api;
 
   await handleModelLoadButtonClick();
@@ -43,38 +43,44 @@ let spinner;
   infoBox.onclick = handleInfoBoxActions;
 
   api.sceneManager.on('selectionChanged', handleSelectionChange);
-}());
-
+})();
 
 function showLoading(show) {
-  show ?
-    spinner.classList.remove('hidden')
-        :
-    spinner.classList.add('hidden');
+  show ? spinner.classList.remove('hidden') : spinner.classList.add('hidden');
 }
 
-function handleSelectionChange(instance){
-  if(!instance) return;
+function handleSelectionChange(instance) {
+  if (!instance) return;
   renderInfoBox(instance);
   selection = instance;
 }
 
 function renderInfoBox(selection) {
-  if(!selection) {
+  if (!selection) {
     infoBox.innerHTML = '';
     return;
   }
 
-  function renderMaterials(){
-
+  function renderMaterials() {
     return Object.values(selection.properties)
       .filter(p => p.type === 'material' && p.options.length)
-      .map(p => `
+      .map(
+        p => `
         <div>
           <div class="sublabel">${p.name}</div>
-          <div>${p.options.map(c => `<img data-material-name="${p.name}" data-material-key="${c.key}" class="thumbnail ${p.value.key === c.key ? "selected" : ""}" src="${c.imageUrl}">`).join('')}</div>
+          <div>${p.options
+            .map(
+              c =>
+                `<img data-material-name="${p.name}" data-material-key="${
+                  c.key
+                }" class="thumbnail ${
+                  p.value.key === c.key ? 'selected' : ''
+                }" src="${c.imageUrl}">`
+            )
+            .join('')}</div>
         </div>`
-      ).join('');
+      )
+      .join('');
   }
 
   infoBox.innerHTML = `
@@ -85,12 +91,12 @@ function renderInfoBox(selection) {
   `;
 }
 
-async function handleInfoBoxActions(){
-  if(event.target.id === 'deleteButton'){
+async function handleInfoBoxActions() {
+  if (event.target.id === 'deleteButton') {
     return removeInstance(selection);
   }
-  if(event.target.classList.contains('thumbnail')){
-    const { materialKey, materialName} = event.target.dataset;
+  if (event.target.classList.contains('thumbnail')) {
+    const { materialKey, materialName } = event.target.dataset;
     await setProperty(selection, { [materialName]: materialKey });
     renderInfoBox(selection);
   }
@@ -101,17 +107,19 @@ async function removeInstance(instance) {
   renderInfoBox();
 }
 
-function setProperty(instance, opts){
+function setProperty(instance, opts) {
   return instance && instance.setPropertyValues(opts);
 }
 
-async function handleModelLoadButtonClick(){
-  if(!modelIdInput.value) return;
+async function handleModelLoadButtonClick() {
+  if (!modelIdInput.value) return;
 
   showLoading(true);
 
   api.sceneManager.clearScene();
-  const model = await api.modelManager.getModelFromRepository(modelIdInput.value);
+  const model = await api.modelManager.getModelFromRepository(
+    modelIdInput.value
+  );
   const instance = await api.sceneManager.insertModel(model, {});
   await api.cameras.perspectiveCamera.zoomToFit();
 

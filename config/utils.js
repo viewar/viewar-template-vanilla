@@ -1,18 +1,21 @@
 const webpack = require('webpack');
 const path = require('path');
 
-exports.setFreeVariable = (key, value) => {
+const setFreeVariable = (key, value) => {
   const env = {};
   env[key] = JSON.stringify(value);
 
   return {
-    plugins: [
-      new webpack.DefinePlugin(env),
-    ],
+    plugins: [new webpack.DefinePlugin(env)],
   };
 };
 
-exports.paths = () => ({
-  app: path.join(__dirname, '../src'),
-  build: path.join(__dirname, '../build'),
-});
+const root = path.join(__dirname, '..');
+const srcPath = path.join(root, 'src');
+const buildPath = path.join(root, 'build');
+
+module.exports = {
+  setFreeVariable,
+  srcPath,
+  buildPath,
+};
