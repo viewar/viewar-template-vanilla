@@ -2,22 +2,20 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   font-family: sans-serif;
-  font-size: 9pt;
 }
 
 #app {
-  position: absolute;
-  z-index: 2;
-}
-
-.emscripten {
-  z-index: 1 !important;
+  font-weight: 300;
+  font-size: 16px;
+  color: #282f39;
+  font-size: 16px;
 }
 
 #customCanvas {
@@ -29,7 +27,7 @@ body {
   margin: 5px;
   background-color: rgba(255, 255, 255, 0.44);
   padding: 8px;
-  width: 132px;
+  width: 150px;
 }
 
 .hidden {
