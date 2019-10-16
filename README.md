@@ -1,5 +1,7 @@
 # ViewAR vanilla sample
 
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/viewar-template-vanilla)](https://dependabot.com)
+
 This sample project demonstrates a basic usage of the [ViewAR Api](https://www.npmjs.com/package/viewar-api) using pure JavaScript without any framework.
 
 #### Features:
