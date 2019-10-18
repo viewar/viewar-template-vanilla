@@ -1,6 +1,6 @@
 {
   "name": "viewar-template-vanilla",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "boilerplate for viewar apps",
   "main": "index.js",
   "repository": {
