@@ -34,12 +34,11 @@
   "author": "Karl Hofer <kh@viewar.com>",
   "license": "ISC",
   "dependencies": {
-    "viewar-api": "^0.56.1",
-    "viewar-core": "^11.18.1",
+    "viewar-core": "^11.41.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
+    "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
