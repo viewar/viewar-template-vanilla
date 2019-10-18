@@ -1,7 +1,7 @@
 # ViewAR vanilla sample
 
-[![Build Status](https://travis-ci.com/viewar/viewar-boilerplate-vanilla.svg?&branch=master)](https://travis-ci.com/viewar/viewar-boilerplate-vanilla)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/viewar-boilerplate-vanilla)](https://dependabot.com)
+[![Build Status](https://travis-ci.com/viewar/viewar-template-vanilla.svg?&branch=master)](https://travis-ci.com/viewar/viewar-template-vanilla)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/viewar-template-vanilla)](https://dependabot.com)
 [![PRs Welcome][pr-welcome]](http://makeapullrequest.com)
 [![Conventional Commits](https://img.shields.io/badge/✔-Conventional%20Commits-blue.svg)](https://conventionalcommits.org)
 
