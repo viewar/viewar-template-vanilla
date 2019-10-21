@@ -57,7 +57,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.15.2",
     "react-hot-loader": "^4.3.12",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.9",
