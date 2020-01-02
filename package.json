@@ -35,7 +35,7 @@
   "license": "ISC",
   "dependencies": {
     "viewar-api": "^1.1.0",
-    "viewar-core": "^11.65.1",
+    "viewar-core": "^11.66.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
